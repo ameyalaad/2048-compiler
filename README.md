@@ -11,3 +11,4 @@ In order to now run the game, run it using
 ```bash
 python Driver.py
 ```
+Use Ctrl+C to exit the program

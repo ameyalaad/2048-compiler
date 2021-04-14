@@ -10,13 +10,13 @@ class TZFEParser(Parser):
         super().__init__()
         self.storage = storage
 
-    @_('move', 'getval', 'assign', 'naming', 'noperiod', 'keyworderror', 'empty')
+    @_('move', 'getval', 'assign', 'naming', 'noperiod', 'keyworderror') #, 'empty')
     def all(self, p):
         pass
 
-    @_('')
-    def empty(self, p):
-        exit(0)
+    # @_('')
+    # def empty(self, p):
+    #     exit(0)
 
     @_('ADD UP PERIOD', 'ADD DOWN PERIOD', 'ADD LEFT PERIOD', 'ADD RIGHT PERIOD', 'SUBTRACT UP PERIOD', 'SUBTRACT DOWN PERIOD', 'SUBTRACT LEFT PERIOD', 'SUBTRACT RIGHT PERIOD', 'MULTIPLY UP PERIOD', 'MULTIPLY DOWN PERIOD', 'MULTIPLY LEFT PERIOD', 'MULTIPLY RIGHT PERIOD', 'DIVIDE UP PERIOD', 'DIVIDE DOWN PERIOD', 'DIVIDE LEFT PERIOD', 'DIVIDE RIGHT PERIOD')
     def move(self, p):
