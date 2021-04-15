@@ -33,9 +33,10 @@ class TZFEParser(Parser):
             print("2048> There is no tile like that. The tile co-ordinates must be in the range 1,2,3,4.")      
             eprint("-1")      
         else:
-            print(f"2048> Thanks, value in ({p[1][1]}, {p[1][3]}) is {self.storage.get_value(p[1][1]-1, p[1][3]-1)}")
-            eprint("-1")
-            return self.storage.get_value(p[1][1]-1, p[1][3]-1)
+            val = self.storage.get_value(p[1][1]-1, p[1][3]-1)
+            print(f"2048> Thanks, value in ({p[1][1]}, {p[1][3]}) is {val}")
+            eprint(val)
+            return val
 
     @_('ASSIGN value TO location PERIOD')
     def assign(self, p):

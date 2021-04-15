@@ -7,6 +7,8 @@ To install sly, run the following in your environment:
 pip install sly
 ```
 
+Alternatively, the sly package can be unarchived and used as-is. The folder "sly" should contain the library.
+
 In order to now run the game, run it using
 ```bash
 python Driver.py

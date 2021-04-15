@@ -44,7 +44,7 @@ class Storage:
         for i in range(4):
             for j in range(4):
                 if self._vars[i][j] != []:
-                    states += " ".join([str(i+1)+","+str(j+1)+varname for varname in self._vars[i][j]]) + " "
+                    states += str(i+1)+","+str(j+1)+",".join(self._vars[i][j]) + " "
         eprint(states)
 
     def generate_update(self):
